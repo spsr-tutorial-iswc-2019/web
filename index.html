@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<title>ISWC 2019 Tutorial</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/w3.css">
+<!--<link rel="stylesheet" href="css/hexagons.css">-->
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+body, html {
+    height: 100%;
+    line-height: 1.8;
+}
+</style>
+
+<!-- TO ADD: PROVENANCE OF THE PAGE, JSON-LD SNIPPET-->
+
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <a href="#home" class="w3-bar-item w3-button w3-wide"><img src="images/logo2019.png" height="40px"></img></a>
+    <div class="w3-right w3-hide-small">
+    
+      <a href="#intro" class="w3-bar-item w3-button">INTRODUCTION</a>
+      <a href="#overview" class="w3-bar-item w3-button">OVERVIEW</a>
+      <a href="#outcome" class="w3-bar-item w3-button">OUTCOME</a>
+      <a href="#organizers" class="w3-bar-item w3-button"></i> ORGANIZERS</a>
+      
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="#intro" onclick="w3_close()" class="w3-bar-item w3-button">INTRODUCTION</a>
+  <a href="#overview" onclick="w3_close()" class="w3-bar-item w3-button">OVERVIEW</a>
+  <a href="#outcome" onclick="w3_close()" class="w3-bar-item w3-button">OUTCOME</a>
+  <a href="#organizers" onclick="w3_close()" class="w3-bar-item w3-button">ORGANIZERS</a>
+  
+</nav>
+
+
+
+<div class="w3-container" id="intro">
+    <div class="w3-row-padding">
+      <h2 style="padding-top:6%;padding-bottom:2%">Semantic Web and Provenance for Scientific Reproducibility (SPSR)</h2>
+    <p>
+    Scientific reproducibility is in crisis in multiple disciplines, e.g., social sciences, natural sciences and biomedical research among many others. This crisis has been highlighted by a growing number of community and government initiatives, for example the European Union Open Research Data, the US National Institutes of Health (NIH) “Rigor and Reproducibility” guidelines, Research Data Alliance (RDA), Force11, and DataONE projects. Semantic web, together with provenance, software and method metadata play a central role in facilitating scientific reproducibility. The objective of this tutorial is to provide a landscape of the tools, standards and guidelines that an author should follow to make their work (i.e., data, software, methods, provenance and context) reproducible. The first part of the tutorial will introduce a framework for different levels of reproducibility desired in scientific research and underline the challenges involved in achieving each of them. In the second part, we will describe the role of semantic web standards, including the W3C PROV specifications in scientific reproducibility. Finally, in the third part of the tutorial we will present real world examples of provenance-enabled scientific reproducibility projects. For example, the ProvCaRe project with the largest repository of semantic provenance extracted from biomedical literature for evaluating reproducibility, OntoSoft for tracking software metadata, Research Objects for packaging and annotating scientific research outputs, and W2Share for converting scripts into reproducible workflows. The SPSR tutorial will conclude with a discussion of open challenges in scientific reproducibility and the potential role of semantic web research in addressing these challenges.
+    </p>
+    <br/>
+    </div> 
+</div>
+  
+ <div class="w3-container w3-light-grey" id="overview">
+    <div class="w3-row-padding">
+      <h2 style="padding-bottom:2%">Tutorial overview</h2>
+    <p>This 3-hour tutorial will be split into three parts: </p>
+<h3>Part I. Reproducibility and Provenance Primer</h3>
+<p>
+A plethora of terms have been in the literature used to characterize reproducibility including repeat, replicate, reproduce, redo, rerun, recompute, reuse and repurpose etc. to name a few. We start our tutorial by introducing a succinct terminology to characterize reproducibility based on a review of the various definitions provided in the literature. Specifically, we retained four terms that cover the different levels of reproducibility that can be achieved and/or desired, which we describe hereafter.
+</p><ul>
+
+<li>Repeat. An experiment is said to be repeated when it is performed in the same lab (or computation environment) as the original experiment, that is, on the same scientific environment. The major goal of the repeat task is to check whether the initial experiment was correct and can be performed again. </li>
+
+<li>Replicate. An experiment is said to be replicated when it is performed in a different lab (or computational environment) than the original experiment. When replicated, a result has a high level of robustness compared with the repeat case: the result remains valid in a similar (even though different) setting. 
+</li>
+<li>Reproduce. Reproduce is defined in the broadest possible sense of the term and denotes the situation where an experiment is performed within a different set-up but with the aim to validate the same scientific hypothesis. In other words, completely different approaches can be designed, completely different data sets can be used, as long as both experiments converge to the same scientific conclusion. </li>
+<li>Reuse. A last very important concept related to reproducibility is Reuse which denotes the case where a different experiment is performed, with similarities with an original experiment. A specific kind of reuse occurs when a single experiment is reused in a new context (and thus adapted to new needs), the experiment is then said to be repurposed. </li>
+</ul>
+<p>
+We will showcase each of the above reproducibility levels using concrete examples. As well as reproducibility, we will introduce in this part provenance. We will introduce notions of provenance using the W7 model involving Why, Who, When, Where, Which, Who, How. We will then present the W3C PROV model in details. This is because this model underpins the majority of provenance-based solution that has been proposed for fostering scientific reproducibility. We will end the first part of the tutorial by discussing how provenance can be a key ingredient for enabling reproducibility. In doing so, we will draw the relationships between provenance and the reproducibility levels introduced before.
+</p>
+<h3>Part II. W3C PROV-Based Solutions for Facilitating Reproducibility</h3>
+<p>
+In the second part, we present provenance-based solutions that have been developed by the semantic web community for fostering the reproducibility of scientific research. Such solutions cover a large spectrum of uses that facilitate scientific reproducibility. For example, provenance can be used for semi-automating the annotation, summarization and reporting of experiment results. Indeed, provenance has been used as a means for inferring annotations on the artifacts (data) used and generated by experiments, as well as semi-automating the reporting the results of the experiment.   Provenance can be used also for comparing experiments. In particular, provenance has been used to compare the executions of experiments that are instances of the same pipelines (workflows). This can be used to check (at least) the repeatability of experiments. Provenance can also be utilized for debugging experiments by helping users identifying the pinpointing the steps (modules) and/or datasets that are responsible for errors in computational experiments. Provenance has also been used in versioning experiments, in reducing the time and resources required for experiment re-execution  using smart reruns, and to reuse experiments or part thereof.
+</p>
+<p>
+We will present in the tutorial concrete examples that showcase the above uses of provenance, and discuss how they promote scientific reproducibility. As well as exposing the used of provenance for facilitating reproducibility, we will also discuss proposals/initiatives that seeks to automatically record provenance for reproducibility purposes, e.g., ReproZip [25], ResearchObjects.
+</p>
+
+<h3>Part III. Where Are We Today? Challenges in Scientific Reproducibility</h3>
+<p>
+The last part of the tutorial will focus on drawing a map of the state of the art (presented in the second part), highlighting reproducibility aspects that such solutions cater for. We will also discuss the place of provenance in international reproducibility-related efforts, in particular FAIR, RDA, DataONE. Finally, we will be discussing open issues (opportunities) that still need to be tackled and in which the semantic web community can play an instrumental role.
+    </p>
+    <br/>
+    </div> 
+</div>  
+
+ <div class="w3-container" id="outcome">
+    <div class="w3-row-padding">
+      <h2 style="padding-bottom:2%">What will you learn?</h2>
+    <p>
+    The three learning outcomes of the tutorial are:
+    </p>
+    <ul>
+        <li>Gain an understanding of the role of semantic web standards and in particular provenance metadata in enabling scientific reproducibility through the paradigm of Repeat, Replicate, Reproduce, Reuse.</li>
+<li>Gain an understanding of the role of W3C PROV specifications in supporting scientific reproducibility. In particular, the attendees will gain insight into the ongoing projects in scientific reproducibility using provenance and semantic web standards.</li>
+<li>Appreciate the challenges facing scientific reproducibility and the open issues that are opportunities for the semantic web community to lead the development of solutions for reproducibility.</li>
+    </ul>
+    <br/>
+    </div> 
+</div>  
+
+<div class="w3-container" id="organizers">
+  <h2>ORGANIZERS</h2>
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-third w3-margin-bottom">
+      <div class="w3-card" align="center">
+        <img src="images/satya.jpg" alt="Satya" style="width:50%">
+        <div class="w3-container">
+          <h3>Satya Sahoo</h3>
+          <p class="w3-opacity">Case Western Reserve University</p>
+          <p>Satya S. Sahoo is Associate Professor at the Case Western Reserve University (CWRU) in Cleveland, OH, USA. Satya's research focuses on semantic Web including: (1) ontology engineering (upper-level reference ontologies to application/domain-specific ontologies), (2) ontology-driven data integration and query optimization, and (3) provenance metadata management. His current research projects include the Provenance for Clinical and Health Research (ProvCaRe) project, which has developed an ontology-driven Natural Language Processing workflow to extract provenance metadata from all 1.6 million full-text articles in the PubMed repository. The ProvCaRe project currently hosts the largest repository of biomedical provenance metadata consisting of 166 million provenance triples for query and analysis. Satya has served as member of W3C working group to define the new provenance standard called PROV and is co-editor of the PROV-O specifications. His research has been funded by the US National Institutes of Health (NIH) Big Data to Knowledge Provenance initiative</p>
+          <p><button class="w3-button w3-light-grey w3-block"></i> <a href="http://bmhinformatics.case.edu/.">Website</a></button></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-third w3-margin-bottom">
+      <div class="w3-card" align="center">
+        <img src="images/daniel.png" alt="Daniel Garijo" style="width:50%">
+        <div class="w3-container">
+          <h3>Daniel Garijo</h3>
+          <p class="w3-opacity">University of Southern California</p>
+          <p>Daniel Garijo is a computer scientist at the Information Sciences Institute of the University of Southern California. Previously, he completed his PhD at the Ontology Engineering Group of the Universidad Politecnica of Madrid. His research activities focus on e-Science and the Semantic web, specifically on how to increase the understandability of scientific workflows using provenance, metadata, intermediate results and Linked Data. Daniel served as a member of the W3C Provenance Incubator Working Group and the W3C Provenance Working Group, which led to the family of PROV specifications, as well as in the Dublin Core Provenance Metadata Task Group. Lately he has focused on metadata representations to facilitate the composability and reusability of environmental software</p>
+          <p><button class="w3-button w3-light-grey w3-block"></i> <a href="http://dgarijo.com">Website</a></button></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-third  w3-margin-bottom">
+      <div class="w3-card" align="center">
+        <img src="images/khalid.jpeg" alt="Khalid" style="width:50%">
+        <div class="w3-container">
+          <h3>Mike Ross</h3>
+          <p class="w3-opacity">University Paris-Dauphine</p>
+          <p>Khalid Belhajjame is an Associate Professor at the University Paris-Dauphine. Before moving to Paris, he has been a researcher for several years at the University of Manchester, and prior to that a Ph.D. student at the University of Grenoble. His research interests lie in the areas of information and knowledge management. He made key contributions in the areas of pay-as-you-go data integration, e-Science, scientific workflow management, provenance tracking and exploitation, and semantic web services. He has published over 60 papers in the aforementioned topics. Most of his research proposals were validated against real-world applications from the fields of astronomy, biodiversity and life sciences. He is member of the editorial board of the Data in Brief and XMethod Elsevier journals, has participated in multiple European-, French- and UK-funded projects, and has been an active member of the W3C Provenance working group and the NSF funded DataONE working group on scientific workflows and provenance.</p>
+          <p><button class="w3-button w3-light-grey w3-block"></i><a href="http://semanticweb.org/wiki/Khalid_Belhajjame ">Website</a></button></p>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div> 
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Back to top</a>
+  <p>Developed thanks to <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+ 
+<!-- Add Google Analytics!!!-->
+<script>
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+    if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+    } else {
+        mySidebar.style.display = 'block';
+    }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+
+
+</body>
+</html>
