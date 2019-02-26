@@ -60,42 +60,43 @@ body, html {
       <h2 style="padding-top:6%;padding-bottom:2%">Semantic Web and Provenance for Scientific Reproducibility (SPSR)</h2>
       <h4>Tutorial co-located with <a href="https://iswc2019.semanticweb.org/">ISWC 2019</a></h4>
     <p>
-    Scientific reproducibility is in crisis in multiple disciplines, e.g., social sciences, natural sciences and biomedical research among many others. This crisis has been highlighted by a growing number of community and government initiatives, for example the European Union Open Research Data, the US National Institutes of Health (NIH) “Rigor and Reproducibility” guidelines, Research Data Alliance (RDA), Force11, and DataONE projects. Semantic web, together with provenance, software and method metadata play a central role in facilitating scientific reproducibility. The objective of this tutorial is to provide a landscape of the tools, standards and guidelines that an author should follow to make their work (i.e., data, software, methods, provenance and context) reproducible. The first part of the tutorial will introduce a framework for different levels of reproducibility desired in scientific research and underline the challenges involved in achieving each of them. In the second part, we will describe the role of semantic web standards, including the W3C PROV specifications in scientific reproducibility. Finally, in the third part of the tutorial we will present real world examples of provenance-enabled scientific reproducibility projects. For example, the ProvCaRe project with the largest repository of semantic provenance extracted from biomedical literature for evaluating reproducibility, OntoSoft for tracking software metadata, Research Objects for packaging and annotating scientific research outputs, and W2Share for converting scripts into reproducible workflows. The SPSR tutorial will conclude with a discussion of open challenges in scientific reproducibility and the potential role of semantic web research in addressing these challenges.
-    </p>
+    Scientific reproducibility is in crisis in multiple disciplines, e.g., social sciences, natural sciences and biomedical research among many others. This crisis has been highlighted by a growing number of community and government initiatives, for example the European Union Open Research Data, the US National Institutes of Health (NIH) “Rigor and Reproducibility” guidelines, Research Data Alliance (RDA), Force11, and DataONE projects. Semantic web, together with provenance, software and method metadata play a central role in facilitating scientific reproducibility.</p>
+<p>The objective of this tutorial is to provide a landscape of the tools, standards and guidelines that an author should follow to make their work (i.e., data, software, methods, provenance and context) reproducible.</p>
+	<ul><li>The first part of the tutorial will introduce a framework for different levels of reproducibility desired in scientific research and underline the challenges involved in achieving each of them.</li> 
+	<li>In the second part, we will describe the role of semantic web standards, including the W3C PROV specifications in scientific reproducibility.</li>
+		<li>Finally, in the third part of the tutorial we will present real world examples of provenance-enabled scientific reproducibility projects. For example, the ProvCaRe project with the largest repository of semantic provenance extracted from biomedical literature for evaluating reproducibility, OntoSoft for tracking software metadata, Research Objects for packaging and annotating scientific research outputs, and W2Share for converting scripts into reproducible workflows.</li></ul>
+	<p>The SPSR tutorial will conclude with a discussion of open challenges in scientific reproducibility and the potential role of semantic web research in addressing these challenges.</p>
+    
     <br/>
     </div> 
 </div>
   
  <div class="w3-container w3-light-grey" id="overview">
     <div class="w3-row-padding">
-      <h2 style="padding-bottom:2%">Tutorial overview</h2>
+      <h2 style="padding-bottom:2%">Tutorial Schedule</h2>
     <p>This 3-hour tutorial will be split into three parts: </p>
 <h3>Part I. Reproducibility and Provenance Primer</h3>
 <p>
-A plethora of terms have been in the literature used to characterize reproducibility including repeat, replicate, reproduce, redo, rerun, recompute, reuse and repurpose etc. to name a few. We start our tutorial by introducing a succinct terminology to characterize reproducibility based on a review of the various definitions provided in the literature. Specifically, we retained four terms that cover the different levels of reproducibility that can be achieved and/or desired, which we describe hereafter.
+We start our tutorial by introducing a succinct terminology to characterize reproducibility based on a review of the various definitions provided in the literature. Specifically, we retained four terms that cover the different levels of reproducibility that can be achieved and/or desired, which we describe hereafter.
 </p><ul>
-
 <li>Repeat. An experiment is said to be repeated when it is performed in the same lab (or computation environment) as the original experiment, that is, on the same scientific environment. The major goal of the repeat task is to check whether the initial experiment was correct and can be performed again. </li>
-
-<li>Replicate. An experiment is said to be replicated when it is performed in a different lab (or computational environment) than the original experiment. When replicated, a result has a high level of robustness compared with the repeat case: the result remains valid in a similar (even though different) setting. 
-</li>
-<li>Reproduce. Reproduce is defined in the broadest possible sense of the term and denotes the situation where an experiment is performed within a different set-up but with the aim to validate the same scientific hypothesis. In other words, completely different approaches can be designed, completely different data sets can be used, as long as both experiments converge to the same scientific conclusion. </li>
-<li>Reuse. A last very important concept related to reproducibility is Reuse which denotes the case where a different experiment is performed, with similarities with an original experiment. A specific kind of reuse occurs when a single experiment is reused in a new context (and thus adapted to new needs), the experiment is then said to be repurposed. </li>
+<li>Replicate. An experiment is said to be replicated when it is performed in a different lab (or computational environment) than the original experiment. When replicated, a result has a high level of robustness compared with the repeat case: the result remains valid in a similar (even though different) setting.</li>
+<li>Reproduce. Reproduce is defined in the broadest possible sense of the term and denotes the situation where an experiment is performed within a different set-up but with the aim to validate the same scientific hypothesis. In other words, completely different approaches can be designed, completely different data sets can be used, as long as both experiments converge to the same scientific conclusion.</li>
+<li>Reuse. A last very important concept related to reproducibility is Reuse which denotes the case where a different experiment is performed, with similarities with an original experiment. A specific kind of reuse occurs when a single experiment is reused in a new context (and thus adapted to new needs), the experiment is then said to be repurposed.</li>
 </ul>
-<p>
-We will showcase each of the above reproducibility levels using concrete examples. As well as reproducibility, we will introduce in this part provenance. We will introduce notions of provenance using the W7 model involving Why, Who, When, Where, Which, Who, How. We will then present the W3C PROV model in details. This is because this model underpins the majority of provenance-based solution that has been proposed for fostering scientific reproducibility. We will end the first part of the tutorial by discussing how provenance can be a key ingredient for enabling reproducibility. In doing so, we will draw the relationships between provenance and the reproducibility levels introduced before.
-</p>
+<p>In addition, we will introduce notions of provenance using the W7 model involving Why, Who, When, Where, Which, Who, How. We will conclude by presenting the W3C PROV model in details to demonstrate the critical role of provenance-based solutions in scientific reproducibility.</p>
 <h3>Part II. W3C PROV-Based Solutions for Facilitating Reproducibility</h3>
 <p>
-In the second part, we present provenance-based solutions that have been developed by the semantic web community for fostering the reproducibility of scientific research. Such solutions cover a large spectrum of uses that facilitate scientific reproducibility. For example, provenance can be used for semi-automating the annotation, summarization and reporting of experiment results. Indeed, provenance has been used as a means for inferring annotations on the artifacts (data) used and generated by experiments, as well as semi-automating the reporting the results of the experiment.   Provenance can be used also for comparing experiments. In particular, provenance has been used to compare the executions of experiments that are instances of the same pipelines (workflows). This can be used to check (at least) the repeatability of experiments. Provenance can also be utilized for debugging experiments by helping users identifying the pinpointing the steps (modules) and/or datasets that are responsible for errors in computational experiments. Provenance has also been used in versioning experiments, in reducing the time and resources required for experiment re-execution  using smart reruns, and to reuse experiments or part thereof.
+In the second part, we present provenance-based solutions that have been developed by the semantic web community for fostering the reproducibility of scientific research. Such solutions cover a large spectrum of uses that facilitate scientific reproducibility. For example, provenance can be used for  partially automating the annotation, summarization and reporting of experiment results. Indeed, provenance has been used as a means for inferring annotations on the artifacts (data) used and generated by experiments, as well as  partially automating the reporting the results of the experiment. </p>
+<p>Provenance can be used also for comparison of experiments. In particular, provenance has been used to compare the executions of experiments that are instances of the same pipeline (workflows). This can be used to check (at least) the repeatability of experiments. Provenance can also be utilized for debugging experiments by helping users identifying the pinpointing the steps (modules) and/or datasets that are responsible for errors in computational experiments. Provenance has also been used in versioning experiments, in reducing the time and resources required for experiment re-execution  using smart reruns, and to reuse experiments or part thereof.
 </p>
 <p>
-We will present in the tutorial concrete examples that showcase the above uses of provenance, and discuss how they promote scientific reproducibility. As well as exposing the used of provenance for facilitating reproducibility, we will also discuss proposals/initiatives that seeks to automatically record provenance for reproducibility purposes, e.g., ReproZip [25], ResearchObjects.
+We will present in the tutorial concrete examples that showcase the above uses of provenance, and discuss how they promote scientific reproducibility. As well as exposing the used of provenance for facilitating reproducibility, we will also discuss proposals/initiatives that seeks to automatically record provenance for reproducibility purposes, e.g., ReproZip, and ResearchObjects.
 </p>
 
 <h3>Part III. Where Are We Today? Challenges in Scientific Reproducibility</h3>
 <p>
-The last part of the tutorial will focus on drawing a map of the state of the art (presented in the second part), highlighting reproducibility aspects that such solutions cater for. We will also discuss the place of provenance in international reproducibility-related efforts, in particular FAIR, RDA, DataONE. Finally, we will be discussing open issues (opportunities) that still need to be tackled and in which the semantic web community can play an instrumental role.
+The last part of the tutorial will focus on drawing a map of the state of the art (presented in the second part), highlighting how these solutions cater for specific aspects of reproducibility. We will also discuss the role of provenance in international reproducibility-related efforts with a  particular focus on FAIR, RDA, DataONE. Finally, we will discuss open issues (opportunities and challenges) that need to be tackled and the instrumental role that the semantic web community can play in this critical aspect of scientific research.
     </p>
     <br/>
     </div> 
@@ -117,7 +118,7 @@ The last part of the tutorial will focus on drawing a map of the state of the ar
 </div>  
 
 <div class="w3-container" id="organizers">
-  <h2>ORGANIZERS</h2>
+  <h2>Tutorial Organizers</h2>
   <div class="w3-row-padding" style="margin-top:64px">
     <div class="w3-third w3-margin-bottom">
       <div class="w3-card" align="center">
